@@ -5,10 +5,11 @@ function printLCD(inputs) {
 
 function buildLCD(inputs,string) {
     var stringText = '';
+    var input =inputs.toString();
+    var arr = input.split("");
     for(var j = 0;j < 3;j++) {
-        for (var i = 0; i < inputs.length; i++) {
-            var input = inputs[i];
-            stringText += string[input+10*j];
+        for(var i = 0;i < arr.length;i++) {
+            stringText += string[j][parseInt(arr[i])] + ' ';
         }
         stringText += '\n';
     }

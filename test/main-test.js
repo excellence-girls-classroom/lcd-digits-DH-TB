@@ -3,16 +3,16 @@ describe('LCD', function() {
   var string;
   beforeEach(function(){
     string = givenString();
-    inputs = [9,1,0];
+    inputs = 910;
   });
 
   it(' print correct text', function () {
       spyOn(console, 'log');
       printLCD(inputs);
     var expectText =
-          '._.'+'...'+'._.'+'\n'+
-          '|_|'+'..|'+'|.|'+'\n'+
-          '..|'+'..|'+'|_|'+'\n';
+          '._. ' + '... ' + '._. '+'\n'+
+          '|_| ' + '..| ' + '|.| '+'\n'+
+          '..| ' + '..| ' + '|_| '+'\n';
 
     expect(console.log).toHaveBeenCalledWith(expectText);
   });
